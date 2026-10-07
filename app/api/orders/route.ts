@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {db} from '@/lib/db';import {requireUser} from '@/lib/auth';import {serverError,unauthorized} from '@/lib/http';
+export async function GET(){const u=await requireUser();if(!u)return unauthorized();try{return NextResponse.json({orders:await db.order.findMany({where:{userId:u.id},include:{items:{include:{product:{include:{images:true}}}},payment:true,shipping:true,address:true},orderBy:{createdAt:'desc'}})});}catch(e){return serverError(e)}}

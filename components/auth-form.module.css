@@ -1,0 +1,41 @@
+.form {
+  margin-top: 48px;
+}
+
+.intro {
+  margin: -15px 0 24px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.form label {
+  position: relative;
+}
+
+.form button:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+.message {
+  padding: 12px;
+  border: 1px solid #e7c9c3;
+  background: #fff5f2;
+  color: #8e3d32;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.switch {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.switch a {
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -1,0 +1,53 @@
+.status {
+  display: grid;
+  min-height: 180px;
+  place-content: center;
+  gap: 9px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.status p {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 22px;
+}
+
+.status a {
+  color: var(--brown);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.error {
+  color: #8e3d32;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toast a {
+  color: #e7c29e;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.toast button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .quickAdd {
+    transform: translateY(0);
+  }
+}

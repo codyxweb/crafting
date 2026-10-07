@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {db} from '@/lib/db';import {requireUser} from '@/lib/auth';import {error,serverError,unauthorized} from '@/lib/http';
+export async function GET(_:Request,{params}:{params:{id:string}}){const user=await requireUser();if(!user)return unauthorized();try{const order=await db.order.findFirst({where:{id:params.id,userId:user.id},include:{items:{include:{product:{include:{images:true}}}},payment:true,shipping:true,address:true}});return order?NextResponse.json({order}):error('Order not found.',404)}catch(e){return serverError(e)}}
