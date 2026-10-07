@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#faf7f2">
+    <meta name="description" content="Thoughtfully made, handmade homewares and gifts from Seyora Studio.">
+    <title>Seyora Studio — Made with meaning</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #292521;
+        --muted: #746d65;
+        --brown: #8b5e3c;
+        --cream: #faf7f2;
+        --line: #e8e1d8;
+        --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+        --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--cream); color: var(--ink); font: 15px/1.6 var(--sans); }
+      a { color: inherit; text-decoration: none; }
+      .notice { padding: 9px 18px; background: #292521; color: #fff; text-align: center; font-size: 12px; letter-spacing: .04em; }
+      header { display: flex; min-height: 80px; align-items: center; justify-content: space-between; gap: 24px; padding: 14px max(24px, calc((100vw - 1180px) / 2)); border-bottom: 1px solid var(--line); }
+      .brand { font: 29px/1 var(--serif); letter-spacing: .04em; }
+      .brand small { display: block; margin-top: 7px; font: 9px/1 var(--sans); letter-spacing: .22em; text-align: center; }
+      nav { display: flex; flex-wrap: wrap; gap: 25px; color: #514a43; font-size: 12px; }
+      .hero { display: grid; min-height: 540px; grid-template-columns: 1fr 1fr; align-items: center; gap: 6%; max-width: 1180px; margin: auto; padding: 62px 24px; }
+      .eyebrow { color: var(--brown); font-size: 10px; font-weight: 650; letter-spacing: .18em; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; }
+      h1 { max-width: 520px; margin: 18px 0; font-size: clamp(46px, 6vw, 76px); }
+      h1 em, h2 em { color: var(--brown); font-weight: 400; }
+      .hero-copy > p:not(.eyebrow) { max-width: 410px; color: var(--muted); }
+      .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; margin-top: 17px; padding: 0 22px; background: var(--ink); color: white; font-size: 10px; font-weight: 650; letter-spacing: .1em; }
+      .hero-image { position: relative; min-height: 405px; overflow: hidden; background: #ded3c4; }
+      .hero-image img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+      .image-note { position: absolute; right: 15px; bottom: 15px; padding: 10px 14px; background: var(--cream); font: 14px var(--serif); }
+      .section { max-width: 1180px; margin: auto; padding: 62px 24px; }
+      .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 25px; }
+      h2 { margin-bottom: 0; font-size: clamp(31px, 4vw, 47px); }
+      .section-heading > a { color: var(--brown); font-size: 10px; font-weight: 650; letter-spacing: .1em; }
+      .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+      .product img { display: block; width: 100%; aspect-ratio: 4 / 4.7; object-fit: cover; background: #eee8df; }
+      .product h3 { margin: 13px 0 4px; font-size: 21px; }
+      .product p { margin: 0; color: var(--muted); font-size: 13px; }
+      .story { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8%; padding: 70px max(24px, calc((100vw - 1180px) / 2)); background: #eee8df; }
+      .story img { width: 100%; max-height: 390px; object-fit: cover; }
+      .story p:last-child { max-width: 440px; margin-top: 18px; color: var(--muted); }
+      footer { padding: 32px 24px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 12px; }
+      footer strong { color: var(--ink); font-family: var(--serif); font-size: 19px; font-weight: 400; }
+      @media (max-width: 720px) {
+        header { min-height: 70px; }
+        nav { gap: 12px; justify-content: end; font-size: 11px; }
+        .hero { min-height: auto; grid-template-columns: 1fr; gap: 30px; padding-top: 48px; }
+        .hero-image { min-height: 330px; }
+        .products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+        .story { grid-template-columns: 1fr; gap: 28px; }
+      }
+      @media (max-width: 420px) {
+        header { align-items: flex-start; padding-inline: 16px; }
+        .brand { font-size: 25px; }
+        nav { max-width: 190px; gap: 8px 13px; }
+        .section, .hero { padding-inline: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notice">A little something lovely — made in India, with intention</div>
+    <header>
+      <a class="brand" href="#" aria-label="Seyora Studio home">seyora<small>MADE WITH MEANING</small></a>
+      <nav aria-label="Main navigation">
+        <a href="#collection">Collection</a>
+        <a href="#story">Our story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">THE ART OF EVERYDAY</p>
+          <h1>Made by hand.<br>Made to <em>feel special.</em></h1>
+          <p>Thoughtful objects, made slowly and meant to stay. Find the pieces that feel a little like you.</p>
+          <a class="button" href="#collection">DISCOVER THE COLLECTION</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Warm, handmade objects in a thoughtfully styled home">
+          <span class="image-note">Made slowly, for everyday</span>
+        </div>
+      </section>
+      <section class="section" id="collection">
+        <div class="section-heading">
+          <div><p class="eyebrow">A WORLD OF WELL-MADE THINGS</p><h2>Little pieces, <em>big feeling.</em></h2></div>
+          <a href="#contact">MADE WITH CARE</a>
+        </div>
+        <div class="products">
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="The Sunday Vase, handmade stoneware">
+            <h3>The Sunday Vase</h3><p>Stoneware · ₹3,200</p>
+          </article>
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Little Sun handmade brass jewellery">
+            <h3>Little Sun Studs</h3><p>Brass · ₹1,850</p>
+          </article>
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="A softly glowing handmade candle">
+            <h3>Still Life Candle</h3><p>Soy wax · ₹1,250</p>
+          </article>
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="The Keepsake handmade ceramic bowl">
+            <h3>The Keepsake Bowl</h3><p>Stoneware · ₹2,400</p>
+          </article>
+        </div>
+      </section>
+      <section class="story" id="story">
+        <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="A craft maker at work in a sunlit studio">
+        <div>
+          <p class="eyebrow">NOT MADE IN A HURRY</p>
+          <h2>Good things take<br><em>the time they take.</em></h2>
+          <p>We work with independent makers who care about the little things. Every curve, every stitch, every last detail. Nothing here is made to be rushed.</p>
+        </div>
+      </section>
+    </main>
+    <footer id="contact">
+      <p><strong>seyora studio</strong></p>
+      <p>Thoughtfully made. Beautifully yours.</p>
+      <p>This is a static preview hosted on GitHub Pages. Account, cart, and checkout need the full application server.</p>
+    </footer>
+  </body>
+</html>
